@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">AppContatos</string>
-    <string name="img_photograph_description">Descrição de imagem</string>
+    <string name="img_photograph_description">Foto do Contato</string>
+
+    <string name="menu_1">Menu 1</string>
+    <string name="menu_2">Menu 2</string>
+    <string name="menu_3">Menu 3</string>
 </resources>

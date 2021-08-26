@@ -3,6 +3,8 @@ package com.example.appcontatos
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ContactAdapterViewHolder>() {
@@ -22,11 +24,20 @@ class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ContactAdapterViewHol
         return list.size
     }
 
-    class ContactAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        fun updateList(list: List<Contact>){
+            this.list.clear()
+            this.list.addAll(list)
+            notifyDataSetChanged()
+        }
 
+    class ContactAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        private val txtName: TextView = itemView.findViewById(R.id.txt_name)
+        private val txtPhone: TextView = itemView.findViewById(R.id.txt_phone)
+        private val imgPhoto: ImageView = itemView.findViewById(R.id.img_photograph)
 
         fun bind(contact: Contact){
-
+            txtName.text = contact.name
+            txtPhone.text = contact.phone
         }
     }
 }
