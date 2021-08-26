@@ -94,6 +94,7 @@ class MainActivity() : AppCompatActivity(), ClickItemContactListener {
     override fun clickItemContact(contact: Contact){
         val intent = Intent(this, DetailActivity::class.java)
         startActivity(intent)
+        updateList()
     }
 
 }

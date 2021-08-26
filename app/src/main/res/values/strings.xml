@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">AppContatos</string>
     <string name="img_photograph_description">Foto do Contato</string>
+    <string name="txt_nome">Nome do Contato</string>
+    <string name="txt_phone">(00) 0000-0000</string>
 
     <string name="menu_1">Menu 1</string>
     <string name="menu_2">Menu 2</string>
