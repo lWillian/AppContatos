@@ -13,6 +13,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.appcontatos.DetailActivity.Companion.EXTRA_CONTACT
 
 
 class MainActivity() : AppCompatActivity(), ClickItemContactListener {
@@ -93,8 +94,9 @@ class MainActivity() : AppCompatActivity(), ClickItemContactListener {
 
     override fun clickItemContact(contact: Contact){
         val intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra(EXTRA_CONTACT,contact)
         startActivity(intent)
-        updateList()
+
     }
 
 }
